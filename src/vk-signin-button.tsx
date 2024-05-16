@@ -6,10 +6,10 @@ import classNames from "classnames"
 import "./index.sass"
 
 const i18n = {
-  "en-US": {
+  "en": {
     login: "Sign in with VK ID",
   },
-  "ru-RU": {
+  "ru": {
     login: "Войти с VK ID",
   },
 }
@@ -38,7 +38,7 @@ function ensureParamsAreGood(props: VKButtonProps) {
 
 export function VkSignInButton(props: VKButtonProps): JSX.Element {
   const userLocale = navigator.language
-  const locale = i18n[userLocale] ?? i18n["en-US"]
+  const locale = i18n[userLocale] ?? i18n["en"]
   const onClickHandler = (e: any) => {
     e.preventDefault()
     ensureParamsAreGood(props)
