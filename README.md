@@ -3,8 +3,10 @@
 ## Usage
 
 ```tsx
-      <VkSignInButton
-        appId={12345678}
-        redirectURL={"https://example.com"}
-      ></VkSignInButton>
+import { VkSignInButton } from "@riaskov/vk-signin-widget"
+
+<VkSignInButton
+    appId={12345678}
+    redirectURL={"https://example.com"}>
+</VkSignInButton>
 ```
