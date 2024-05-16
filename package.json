@@ -1,7 +1,7 @@
 {
   "name": "@riaskov/vk-signin-widget",
   "description": "VK ID Signin Widget for React",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "MIT",
   "keywords": ["react", "vk", "vkid", "vk id", "widget", "signin"],
   "repository": {
@@ -25,17 +25,20 @@
     }
   },
   "scripts": {
+    "prepublish": "yarn run build",
     "build:webpage": "npx parcel build src/test-page/index.html",
-    "build": "npx parcel build src/vk-signin-button.tsx",
+    "build": "npx parcel build src/vk-signin-button.tsx && yarn run copy-types",
     "start:dev": "npx parcel src/test-page/index.html",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "copy-types": "copyfiles -f src/*.d.ts dist/"
   },
   "dependencies": {
     "@vkid/sdk": "^1.1.0",
     "classnames": "^2.5.1",
     "prop-types": "^15.6.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "@riaskov/vk-signin-widget": "^1.0.0"
   },
   "devDependencies": {
     "@parcel/config-default": "2.12.0",
@@ -45,6 +48,7 @@
     "@types/node": "20.12.12",
     "@types/react": "18.2.25",
     "@types/react-dom": "18.2.11",
+    "copyfiles": "^2.4.1",
     "parcel": "2.12.0",
     "prettier": "^4.0.0-alpha.8",
     "process": "^0.11.10",

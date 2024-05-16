@@ -1,5 +1,5 @@
 import React from "react"
-import { VkSignInButton } from "../vk-signin-button"
+import { VkSignInButton } from "@riaskov/vk-signin-widget"
 
 function Application() {
   return (
