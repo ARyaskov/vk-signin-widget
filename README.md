@@ -38,6 +38,7 @@ import { VkSignInButton } from "@riaskov/vk-signin-widget"
 | rounded-2                      | ![image](https://github.com/ARyaskov/vk-signin-widget/assets/3934848/1925ea29-8296-4070-b628-25e01cb8e1d7)|
 | rounded-3                      | ![image](https://github.com/ARyaskov/vk-signin-widget/assets/3934848/2e377bbb-0b34-4bda-a8ad-74d4f6f72dc5)|
 
+You can combine classes to get the desired UI, e.g. `className="btn-secondary rounded-1"`
 
 ## Acknowledgements
 VK logo images received from public [VK ID Docs](https://id.vk.com/about/business/go/docs/en/vkid/latest/vk-id/connection/web/auth); all rights on VK assets and trademark belong to [VK](https://vk.company/)
