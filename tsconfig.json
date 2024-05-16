@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "removeComments": true,
+    "target": "es2020",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "jsx": "react",
+    "declaration": true,
+    "sourceMap": false
+  },
+  "exclude": ["node_modules", "dist"]
+}

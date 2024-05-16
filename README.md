@@ -1,1 +1,2 @@
-# vk-signin-widget
+# VK Signin Widget for React 18
+
