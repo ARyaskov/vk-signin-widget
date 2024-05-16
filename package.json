@@ -1,7 +1,7 @@
 {
   "name": "@riaskov/vk-signin-widget",
   "description": "VK ID Signin Widget for React",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "keywords": [
     "react",
@@ -36,7 +36,6 @@
     }
   },
   "scripts": {
-    "prepublish": "yarn run build",
     "build:webpage": "npx parcel build src/test-page/index.html",
     "build": "npx parcel build --no-source-maps src/vk-signin-button.tsx && yarn run copy-types",
     "start:dev": "npx parcel src/test-page/index.html",
