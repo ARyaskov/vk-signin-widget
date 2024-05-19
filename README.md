@@ -1,4 +1,8 @@
 # VK Signin Widget for React
+![NPM Version](https://img.shields.io/npm/v/%40riaskov%2Fvk-signin-widget)
+![NPM Downloads](https://img.shields.io/npm/dw/%40riaskov%2Fvk-signin-widget)
+![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40riaskov%2Fvk-signin-widget)
+
 
 Unofficial VK signin button component for React 18
 
