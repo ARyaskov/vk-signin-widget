@@ -6,10 +6,10 @@ import classNames from "classnames"
 import "./index.sass"
 
 const i18n = {
-  "en": {
+  en: {
     login: "Sign in with VK ID",
   },
-  "ru": {
+  ru: {
     login: "Войти с VK ID",
   },
 }
@@ -19,7 +19,6 @@ export type VKButtonProps = {
   redirectURL: string
   className?: string
   onClickBeforeLogin?: (e: any) => void
-  label?: string
   state?: string
   loginPageParams?: VKButtonLoginPageParams & { mode?: VKButtonConfigAuthMode }
 }
@@ -51,18 +50,22 @@ export function VkSignInButton(props: VKButtonProps): JSX.Element {
     })
     VKSDK.Auth.login(props.loginPageParams)
   }
-  const combinedClassName = classNames(
+  const combinedClassNameButton = classNames(
     "VkIdWebSdk__button VkIdWebSdk__button_reset",
+    props.className,
+  )
+  const combinedClassNameButtonContainer = classNames(
+    "VkIdWebSdk__button_container",
     props.className,
   )
   return (
     <>
       <button
         id="VKIDSDKAuthButton"
-        className={combinedClassName}
+        className={combinedClassNameButton}
         onClick={onClickHandler}
       >
-        <div className="VkIdWebSdk__button_container">
+        <div className={combinedClassNameButtonContainer}>
           <div className="VkIdWebSdk__button_icon">
             <svg
               width="28"
@@ -79,9 +82,7 @@ export function VkSignInButton(props: VKButtonProps): JSX.Element {
               />
             </svg>
           </div>
-          <div className="VkIdWebSdk__button_text">
-            {props.label ?? locale.login}
-          </div>
+          <div className="VkIdWebSdk__button_text">{locale.login}</div>
         </div>
       </button>
     </>

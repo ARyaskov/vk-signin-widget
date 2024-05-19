@@ -1,7 +1,7 @@
 {
   "name": "@riaskov/vk-signin-widget",
   "description": "VK ID Signin Widget for React",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "MIT",
   "keywords": [
     "react",
@@ -38,7 +38,7 @@
   "scripts": {
     "build:webpage": "npx parcel build src/test-page/index.html",
     "build": "npx parcel build --no-source-maps src/vk-signin-button.tsx && yarn run copy-types",
-    "start:dev": "npx parcel src/test-page/index.html",
+    "start:dev": "npx parcel src/index.html",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "copy-types": "copyfiles -f src/*.d.ts dist/"
   },

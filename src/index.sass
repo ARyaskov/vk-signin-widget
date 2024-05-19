@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap')
 
 $azure:#0077ff
 
@@ -19,20 +19,42 @@ $azure:#0077ff
 
 
 .VkIdWebSdk__button
-    border-radius: 8px
-    min-height: 44px
     display: inline-block
-    background: $azure
-    color: white
-    font-weight: 500
     cursor: pointer
     transition: all .1s ease-out
+    text-align: initial
+    min-height: 40px
+    max-height: 48px
+    &.btn-sm
+        min-height: 32px
+        max-height: 40px
+    &.btn-lg
+        min-height: 48px
+        max-height: 56px
 
-    @media screen and (max-width: 550px)
-        .VkIdWebSdk__button_text
+
+.VkIdWebSdk__button_container
+    height: 100%
+    min-height: 40px
+    max-height: 48px
+    font-size: 16pt
+    font-weight: 400
+    line-height: 165%
+    vertical-align: middle
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $azure
+    color: white
+    padding: 8px
+    .VkIdWebSdk__button_icon
+        font-size: 28pt
+
+    &.no-text
+        height: 40px
+        width: 40px
+        > .VkIdWebSdk__button_text
             display: none
-            transition: all 1s ease-out
-
 
     &.btn-secondary
         background: white
@@ -40,42 +62,33 @@ $azure:#0077ff
         border: 1px solid #e0e0e0
         path
             fill: $azure
-        > .VkIdWebSdk__button_text
-            display: flex
-            flex: 1
-            justify-content: center
-        > .VkIdWebSdk__button_icon
-            display: inline-block
-            vertical-align: middle
-
 
     &.btn-sm
-        height: 32px
+        min-height: 32px
+        max-height: 40px
         font-size: 14pt
-        line-height: 32px
-        padding: 8px
+        padding: 4px
         .VkIdWebSdk__button_icon
             font-size: 24pt
-            color: #0077ff
+        &.no-text
+            height: 32px
+            width: 32px
+            > .VkIdWebSdk__button_text
+                display: none
 
 
-    &.btn-md
-        height: 40px
-        font-size: 16pt
-        line-height: 40px
-        padding: 10px
-        .VkIdWebSdk__button_icon
-            font-size: 28pt
-            color: #0077ff
-
-    &.btn-big
-        height: 48px
+    &.btn-lg
+        min-height: 48px
+        max-height: 56px
         font-size: 17pt
-        line-height: 48px
-        padding: 10px
+        padding: 12px
         .VkIdWebSdk__button_icon
             font-size: 28pt
-            color: #0077ff
+        &.no-text
+            height: 48px
+            width: 48px
+            > .VkIdWebSdk__button_text
+                display: none
 
     &.rounded-1
         border-radius: 8px
@@ -93,11 +106,7 @@ $azure:#0077ff
         opacity: .7
         transform: scale(.97)
 
-.VkIdWebSdk__button_container
-    display: flex
-    align-items: center
-    padding: 8px 10px
+.VkIdWebSdk__button_text
+    margin-left: 1vw
 
-.VkIdWebSdk__button_icon + .VkIdWebSdk__button_text
-    margin-left: 10px
 
